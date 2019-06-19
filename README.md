@@ -12,7 +12,7 @@ The code is still under refactoring. Please stay tuned for more.
 
 ### Requirements
 
-Ubuntu 16.04 LTS (althoug not tested, other OS should work too if PyTorch can be installed successfully)
+Ubuntu 16.04 LTS (although not tested yet, other OS should work too if PyTorch can be installed successfully)
 
 Python 3 ([Anaconda](https://www.anaconda.com/) is recommended)
 
