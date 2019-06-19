@@ -1,0 +1,49 @@
+---
+batch_size: 128
+num_epoch: 300
+dataset: 'cifar100'
+num_classes: 100
+use_cosine_lr: True
+cosine_lr_min: 0.0
+warmup_epochs: 5
+lr: 0.1
+lr_scale_factor: 256
+lr_milestones: [150, 225]
+momentum: 0.9
+wd: 0.0005
+nesterov: False
+activation_mode: 0 ### 1: leakyReLU, 2: , other: ReLU
+init_mode: 'kaiming'
+norm_name: 'MixtureBatchNorm2d'
+norm_groups: 0
+norm_k: [10, 10, 20]
+norm_attention_mode: 0
+norm_zero_gamma_init: False
+dataaug:
+    labelsmoothing_rate: 0.0
+    mixup_rate: 0.0
+stem:
+    imagenet_head7x7: False
+aognet:
+    filter_list: [32, 64, 128, 248] ### try to keep 1:2:2:2 ... except for the final stage which can be adusted for fitting the model size
+    out_channels: [0, 0]
+    blocks: [1, 1, 1, 1]
+    dims: [4, 4, 4, 4]
+    max_split: [2, 2, 2, 2]
+    extra_node_hierarchy: [4, 4, 4, 4] # 0: none, 1: tnode topdown, 2: tnode bottomup layerwise, 3: tnode bottomup sequential, 4: or-node lateral connection, 5: tnode bottomup
+    remove_symmetric_children_of_or_node: [1, 2, 1, 2] # if true, aog structure is much simplified and bigger filters and more units can be used
+    terminal_node_no_slice: [0, 0, 0, 0]
+    stride: [1, 2, 2, 2]
+    drop_rate: [0.0, 0.0, 0.1, 0.1]
+    bottleneck_ratio: 0.25
+    handle_dbl_cnt: True
+    handle_tnode_dbl_cnt: False
+    handle_dbl_cnt_in_param_init: False
+    use_group_conv: False
+    width_per_group: 0
+    when_downsample: 1
+    replace_stride_with_avgpool: True
+    use_elem_max_for_ORNodes: False
+
+
+
