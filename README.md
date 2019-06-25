@@ -1,9 +1,8 @@
 
 # AOGNets: Compositional Grammatical Architectures for Deep Learning
 
-This project provides source code for our CVPR19 paper [AOGNets](https://arxiv.org/abs/1711.05847) and
-an on-going work [Mixture Normalization: A Lightweight Integration of Feature Normalization and Attention]().
-The code is still under refactoring. Please stay tuned for more.
+This project provides source code for our CVPR19 paper [AOGNets](https://arxiv.org/abs/1711.05847).
+The code is still under refactoring. Please stay tuned.
 
 ![alt text](images/teaser.png "AOG building block and ImageNet performance")
 
